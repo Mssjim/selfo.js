@@ -6,7 +6,7 @@
   <br />
   <p>
     <a href="https://www.npmjs.com/package/selfo.js"><img src="https://img.shields.io/npm/v/selfo.js.svg?maxAge=3600" alt="NPM version" /></a>
-    <a href="https://www.npmjs.com/package/discord.js"><img src="https://img.shields.io/npm/dt/selfo.js.svg?maxAge=3600" alt="NPM downloads" /></a>
+    <a href="https://www.npmjs.com/package/selfo.js"><img src="https://img.shields.io/npm/dt/selfo.js.svg?maxAge=3600" alt="NPM downloads" /></a>
     <a href="https://github.com/Mssjim/selfo.js"><img src="https://badge.fury.io/gh/Mssjim%2FDragon-Animes.svg" alt="GitHub Version" /></a>
     <a href="https://github.com/Mssjim/selfo.js/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Mssjim/Dragon-Animes.svg" alt="GitHub Version" /></a>
   </p>
@@ -38,17 +38,16 @@ Ignore any warnings about unmet peer dependencies, as they're all optional.
 const { Client } = require('selfo.js');
 const selfo = new Client();
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+selfo.on('ready', () => {
+  console.log(`Logged in as ${selfo.user.tag}!`);
 });
 
-client.on('message', msg => {
-  if (msg.content == 'ping') {
+selfo.on('message', msg => {
+  if (msg.content == 'ping')
     msg.reply('pong');
-  }
 });
 
-client.login('ACCOUNT TOKEN');
+selfo.login('ACCOUNT TOKEN');
 ```
 
 ### Links
