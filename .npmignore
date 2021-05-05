@@ -5,6 +5,9 @@ yarn.lock
 # Miscellaneous
 .vscode/
 
+#Test
+test/
+
 # NPM ignore
 .eslintrc.json
 .gitattributes
