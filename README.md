@@ -36,18 +36,18 @@ Ignore any warnings about unmet peer dependencies, as they're all optional.
 ## Example usage
 ```js
 const { Client } = require('selfo.js');
-const selfo = new Client();
+const client = new Client();
 
-selfo.on('ready', () => {
-  console.log(`Logged in as ${selfo.user.tag}!`);
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
-selfo.on('message', msg => {
-  if (msg.content == 'ping')
-    msg.reply('pong');
+client.on('message', msg => {
+  if (msg.content == 'flood')
+    client.flood('channel/user id', 'Flood Message', 2000)
 });
 
-selfo.login('ACCOUNT TOKEN');
+client.login('ACCOUNT TOKEN');
 ```
 
 ### Links

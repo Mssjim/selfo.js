@@ -293,6 +293,32 @@ class Client extends EventEmitter {
   }
 
   /**
+   * Flood message to specified channel.
+   * @param {String} channelId Channel Id
+   * @param {String} message Text to flood
+   * @param {Number} delay Delay in ms
+   * @example
+   * client.flood('channelId', 'Flood Message', 2000);
+   */
+  flood(channelId, message, delay) {
+    const channel = this.manager.client.channels.get(channelId);
+
+    if(channel == undefined) {
+      this.manager.client.fetchUser(channelId, false).then((user) => {
+        if(user != undefined) {
+          setInterval(() => {
+            return this.rest.methods.sendMessage(user, message);
+          }, delay);
+        }
+      });
+    } else {
+      setInterval(() => {
+        return this.rest.methods.sendMessage(channel, message);
+      }, delay);
+    }
+  }
+
+  /**
    * Requests a sync of guild data with Discord.
    * <info>This can be done automatically every 30 seconds by enabling {@link ClientOptions#sync}.</info>
    * <warn>This is only available when using a user account.</warn>
