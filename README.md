@@ -7,8 +7,8 @@
   <p>
     <a href="https://www.npmjs.com/package/selfo.js"><img src="https://img.shields.io/npm/v/selfo.js.svg?maxAge=3600" alt="NPM version" /></a>
     <a href="https://www.npmjs.com/package/selfo.js"><img src="https://img.shields.io/npm/dt/selfo.js.svg?maxAge=3600" alt="NPM downloads" /></a>
-    <a href="https://github.com/Mssjim/selfo.js"><img src="https://badge.fury.io/gh/Mssjim%2FDragon-Animes.svg" alt="GitHub Version" /></a>
-    <a href="https://github.com/Mssjim/selfo.js/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Mssjim/Dragon-Animes.svg" alt="GitHub Version" /></a>
+    <a href="https://github.com/Mssjim/selfo.js"><img src="https://badge.fury.io/gh/Mssjim%2Fselfo.js.svg" alt="GitHub Version" /></a>
+    <a href="https://github.com/Mssjim/selfo.js/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Mssjim/selfo.js.svg" alt="GitHub Version" /></a>
   </p>
   <p>
     <a href="https://nodei.co/npm/selfo.js/"><img src="https://nodei.co/npm/selfo.js.png?downloads=true&stars=true" alt="NPM info" /></a>
@@ -16,8 +16,8 @@
 </div>
 
 ## About
-selfo.js is an personal [node.js](https://nodejs.org) module that allows you to interact with the
-[Discord API] (https://discordapp.com/developers/docs/intro) focusing on self-bot accounts.
+selfo.js is an personal [node.js](https://nodejs.org) module forked from [Discord.js](https://github.com/discordjs/discord.js) that allows you to interact with the
+[Discord API](https://discordapp.com/developers/docs/intro) focusing on self-bot accounts.
 
 - Object-oriented
 - Predictable abstractions
