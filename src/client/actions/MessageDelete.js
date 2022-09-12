@@ -12,7 +12,9 @@ class MessageDeleteAction extends Action {
     let message;
 
     if (channel) {
-      message = channel.messages.get(data.id);
+      try {
+        message = channel.messages.get(data.id);
+      } catch (e) { message = null }
       if (message) {
         channel.messages.delete(message.id);
         this.deleted.set(channel.id + message.id, message);

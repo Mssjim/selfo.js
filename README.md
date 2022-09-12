@@ -43,8 +43,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content == 'flood')
-    client.flood('channel/user id', 'Flood Message', 2000)
+  if(msg.content == 'Hi')
+    msg.channel.send('Hi xD');
 });
 
 client.login('ACCOUNT TOKEN');
@@ -63,5 +63,14 @@ client.login('ACCOUNT TOKEN');
 ### Extensions
 * [RPC](https://www.npmjs.com/package/discord-rpc) ([source](https://github.com/discordjs/RPC))
 
-## Contributing
-Before creating an issue, please ensure that it hasn't already been reported or suggested.
+## Contributing - bug fixes
+Contributions are welcome! Please feel free to open an issue or submit a pull request, for bug fixes or new features.
+
+1. Fork the repository
+2. Create a new branch `git checkout -b <new-feature-name>`
+3. Make the changes
+4. Commit the changes `git commit -am "Add new feature"`
+5. Push the changes `git push origin <new-feature-name>`
+6. Create a pull request on GitHub
+
+Many thanks!

@@ -28,7 +28,10 @@ class MessageCreateAction extends Action {
           messages,
         };
       } else {
-        const message = channel._cacheMessage(new Message(channel, data, client));
+        let message;
+        try {
+          message = channel._cacheMessage(new Message(channel, data, client));
+        } catch(e) { message = null } // TODO message cause
         channel.lastMessageID = data.id;
         if (user) {
           user.lastMessageID = data.id;
