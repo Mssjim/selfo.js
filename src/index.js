@@ -1,5 +1,11 @@
 const Util = require('./util/Util');
 
+process.on('uncaughtException', err => {
+  const match = err.stack.match(/at\s.*?\(\S+:\d+:\d+\)/);
+  console.log("\x1b[31m[ERROR] " + err.message + "\x1b[0m");
+  console.log("Stack:", match ? match[0] : "");
+});
+
 module.exports = {
   // "Root" classes (starting points)
   Client: require('./client/Client'),
